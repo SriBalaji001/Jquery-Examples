@@ -1,0 +1,9 @@
+.form-control{
+  background-color: aqua;
+}
+#chk0,#chk1,#chk2,#chk3{
+  background-color: aqua;
+}
+#lab1{
+  width: 100px;
+}

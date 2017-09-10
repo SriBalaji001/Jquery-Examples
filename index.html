@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function getVal(){
+    var el=document.getElementById('inp0');
+    var i=0, c, arr=[];
+    while(c=document.getElementById('chk'+(i++))) c.checked? arr[arr.length]=c.value : null;
+    el.value = arr.join(",");
+    }
+    </script>
+  <div class="col-sm-4">
+
+    Courses:<input type="text" class="form-control" name="inp" id="inp0">
+    <span class="label label-primary"id ="lab1">Languages</span><br >
+    <input type="checkbox" name="chk[]" value="C" id="chk0" onclick="getVal()">C<br>
+    <input type="checkbox" name="chk[]" value="C++" id="chk1" onclick="getVal()">C++<br>
+    <input type="checkbox" name="chk[]" value="JAVA" id="chk2" onclick="getVal()">JAVA<br>
+    <input type="checkbox" name="chk[]" value="javascript" id="chk3" onclick="getVal()">Javascript<br>
+    <input type="checkbox" name="chk[]" value="Angular" id="chk4" onclick="getVal()">Angular<br>
+    <input type="checkbox" name="chk[]" value="J2EE" id="chk5" onclick="getVal()">J2EE<br>
+    <br>
+    <input type="button" value="submit"onclick="getVal()">
+    </div>
+  </head>
+  <body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  </body>
+
+</html>
