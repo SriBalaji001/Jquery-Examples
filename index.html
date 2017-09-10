@@ -4,19 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>jquery Examples</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <script type="text/javascript">
     function getVal(){
     var el=document.getElementById('inp0');
     var i=0, c, arr=[];
     while(c=document.getElementById('chk'+(i++))) c.checked? arr[arr.length]=c.value : null;
     el.value = arr.join(",");
+    document.getElementById("sec1").innerHTML = inp0.value;
+    }
+    function click(){
+      var el=document.getElementById('inp0');
+      var i=0, c, arr=[];
+      while(c=document.getElementById('chk'+(i++))) c.checked? arr[arr.length]=c.value : null;
+      el.value = arr.join(",");
+      document.getElementById("sec1").innerHTML = inp0.value;
     }
     </script>
   <div class="col-sm-4">
@@ -30,7 +39,18 @@
     <input type="checkbox" name="chk[]" value="Angular" id="chk4" onclick="getVal()">Angular<br>
     <input type="checkbox" name="chk[]" value="J2EE" id="chk5" onclick="getVal()">J2EE<br>
     <br>
-    <input type="button" value="submit"onclick="getVal()">
+    <select class="form-control" id="sel1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+  <button class="btn-primary" onclick="click()">Submit</button></a>
+  <section id="sec1">
+
+</section>
+    <div>
+    </div>
     </div>
   </head>
   <body>
